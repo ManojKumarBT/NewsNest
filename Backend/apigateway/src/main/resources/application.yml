@@ -1,0 +1,31 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    name: API_Gateway_NewsNest
+  cloud:
+    gateway:
+      routes:
+        - id: UserProfile_NewsNest
+          uri: http://localhost:8085
+          predicates:
+            - Path=/newsnest/v1/**
+        - id: WishList_NewsNest
+          uri: http://localhost:8083
+          predicates:
+            - Path=/newsnest/v1/**
+
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Controller-Allow-Credentials
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true

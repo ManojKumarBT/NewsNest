@@ -1,0 +1,13 @@
+package com.cts.newsnest.authservice.config;
+
+public class AppConstants {
+
+//    public static final String TOPIC_NAME_FOR_AUTH="TopicForAuth";
+    public static final String TOPIC_NAME_FOR_AUTH_UPDATE= "TopicForAuthUpdate";
+    public static final String TOPIC_NAME_FOR_AUTH_DELETE= "TopicForAuthDelete";
+    public static final String GROUP_ID="authgroup";
+
+    public static final String TOPIC_NAME_FOR_USER_PROFILE="TopicForUserProfile";
+//    public static final String TOPIC_NAME_FOR_AUTH_UPDATE="TopicForAuthUpdate";
+    public static final String TOPIC_NAME_FOR_WISHLIST = "TopicForWishlist";
+}
